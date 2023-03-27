@@ -14,10 +14,12 @@ let maxPage = 1;
 let page = 1;
 let searchQuery = "";
 
+
 const prevButton = createButton("previous", () => {
   if (page <= 1) return;
   page--;
   fetchCharacters();
+
 });
 
 const nextButton = createButton("next", () => {
@@ -37,6 +39,7 @@ const searchBar = createSearchBar((event) => {
 navigation.append(prevButton, pagination, nextButton);
 searchBarContainer.append(searchBar);
 fetchCharacters();
+
 
 async function fetchCharacters() {
   try {
