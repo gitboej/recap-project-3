@@ -14,12 +14,10 @@ let maxPage = 1;
 let page = 1;
 let searchQuery = "";
 
-
 const prevButton = createButton("previous", () => {
   if (page <= 1) return;
   page--;
   fetchCharacters();
-
 });
 
 const nextButton = createButton("next", () => {
@@ -40,7 +38,6 @@ navigation.append(prevButton, pagination, nextButton);
 searchBarContainer.append(searchBar);
 fetchCharacters();
 
-
 async function fetchCharacters() {
   try {
     const response = await fetch(
@@ -58,3 +55,9 @@ async function fetchCharacters() {
     console.error(error);
   }
 }
+
+/**
+ *
+ * This is just a test to show the workflow for PR comments and approvals.
+ *
+ */
